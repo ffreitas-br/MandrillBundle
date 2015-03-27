@@ -1,4 +1,4 @@
-HipMandrillBundle
+MandrillBundle
 =================
 
 [![Build Status](https://api.travis-ci.org/Hipaway-Travel/HipMandrillBundle.png?branch=master)] (http://travis-ci.org/Hipaway-Travel/HipMandrillBundle)
