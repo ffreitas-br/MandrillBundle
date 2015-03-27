@@ -61,11 +61,10 @@ class DispatcherTest extends \PHPUnit_Framework_TestCase
             false,
             null
         );
-        $message = (new Message)
-            ->setFromEmail('email1')
-            ->setFromName('name1')
-            ->setSubaccount('subaccount1')
-        ;
+        $message = new Message();
+        $message->setFromEmail('email1');
+        $message->setFromName('name1');
+        $message->setSubaccount('subaccount1');
 
         $dispatcher->send($message, 'template_name', array('template_data'));
         $this->assertEquals('api_key_test', $mandrillService->apikey);
