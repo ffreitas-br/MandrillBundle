@@ -1,7 +1,7 @@
 MandrillBundle
 =================
 
-[![Build Status](https://api.travis-ci.org/Hipaway-Travel/HipMandrillBundle.png?branch=master)] (http://travis-ci.org/Hipaway-Travel/HipMandrillBundle)
+[![Build Status](https://travis-ci.org/ffreitas-br/MandrillBundle.svg)](https://travis-ci.org/ffreitas-br/MandrillBundle)
 
 Send transactional mail through mandrill.com. This bundle provides an easy api for Symfony2 Projects.
 
