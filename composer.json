@@ -1,7 +1,7 @@
 {
     "name": "ffreitas-br/mandrill-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony HipMandrillBundle",
+    "description": "Symfony MandrillBundle",
     "keywords": ["Mandrill", "transaction mail", "transactional", "messages", "email"],
     "homepage": "https://github.com/ffreitas-br/MandrillBundle",
     "license": "MIT",
