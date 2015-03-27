@@ -1,34 +1,11 @@
 <?php
-namespace Hip\MandrillBundle;
+
+namespace FFreitasBr\MandrillBundle\Component\Message;
 
 /**
- * A mandrill message
+ * Class Message
  *
- * Copyright (c) 2013 Hipaway Travel GmbH, Berlin
- *
- * Permission is hereby granted, free of charge, to any person
- * obtaining a copy of this software and associated documentation
- * files (the "Software"), to deal in the Software without
- * restriction, including without limitation the rights to use,
- * copy, modify, merge, publish, distribute, sublicense, and/or
- * sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following
- * conditions:
- *
- * The above copyright notice and this permission notice shall be
- * included in all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
- * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
- * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
- * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
- * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- *
- * @author: Sven Loth <sven@svenloth.de>
- * @copyright: 2013 Hipaway Travel GmbH, Berlin
+ * @package FFreitasBr\MandrillBundle\Component\Message
  */
 class Message
 {
@@ -593,7 +570,7 @@ class Message
      * Shortcut to set a reply-to header
      *
      * @param string $email
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setReplyTo($email)
     {
@@ -605,7 +582,7 @@ class Message
     /**
      * Shortcut to mark a message as important
      *
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function isImportant()
     {
@@ -620,7 +597,7 @@ class Message
      * an optional address to receive an exact copy of each recipient's email
      *
      * @param string $bccAddress
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setBccAddress($bccAddress)
     {
@@ -633,7 +610,7 @@ class Message
      * the sender email address
      *
      * @param string $fromEmail
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setFromEmail($fromEmail)
     {
@@ -646,7 +623,7 @@ class Message
      * optional from name to be used
      *
      * @param string $fromName
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setFromName($fromName)
     {
@@ -659,7 +636,7 @@ class Message
      * the full HTML content to be sent
      *
      * @param string $html
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setHtml($html)
     {
@@ -672,7 +649,7 @@ class Message
      * optional full text content to be sent
      *
      * @param string $text
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setText($text)
     {
@@ -685,7 +662,7 @@ class Message
      * the message subject
      *
      * @param string $subject
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setSubject($subject)
     {
@@ -698,7 +675,7 @@ class Message
      * whether or not to turn on click tracking for the message
      *
      * @param boolean $trackClicks
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setTrackClicks($trackClicks)
     {
@@ -711,7 +688,7 @@ class Message
      * whether or not to turn on open tracking for the message
      *
      * @param boolean $trackOpens
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setTrackOpens($trackOpens)
     {
@@ -724,7 +701,7 @@ class Message
      * whether or not to strip the query string from URLs when aggregating tracked URL data
      *
      * @param boolean $urlStripQs
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setUrlStripQs($urlStripQs)
     {
@@ -749,7 +726,7 @@ class Message
      * whether or not to expose all recipients in to "To" header for each email
      *
      * @param boolean $preserveRecipients
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setPreserveRecipients($preserveRecipients)
     {
@@ -764,7 +741,7 @@ class Message
      * Will automatically be set to true if either merge_vars or global_merge_vars are provided.
      *
      * @param boolean $merge
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setMerge($merge)
     {
@@ -779,7 +756,7 @@ class Message
      * If this isn't provided the message will not be added to a subacount
      * 
      * @param string $subaccount
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setSubaccount($subaccount)
     {
@@ -794,7 +771,7 @@ class Message
      * If this isn't provided the email's from address will be used instead.
      *
      * @param string $googleAnalyticsCampaign
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setGoogleAnalyticsCampaign($googleAnalyticsCampaign)
     {
@@ -807,7 +784,7 @@ class Message
      * whether or not to automatically generate a text part for messages that are not given text
      *
      * @param boolean $autoText
-     * @return \Hip\MandrillBundle\Message
+     * @return \FFreitasBr\MandrillBundle\Component\Message\Message
      */
     public function setAutoText($autoText)
     {

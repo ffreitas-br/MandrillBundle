@@ -24,7 +24,3 @@ matrix:
   allow_failures:
     - php: hhvm
     - env: SYMFONY_VERSION=2.7.*@dev
-
-notifications:
-  email:
-    - sven.loth@me.com

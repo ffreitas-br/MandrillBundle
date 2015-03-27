@@ -1,9 +1,9 @@
 {
-    "name": "hipaway-travel/mandrill-bundle",
+    "name": "ffreitas-br/mandrill-bundle",
     "type": "symfony-bundle",
     "description": "Symfony HipMandrillBundle",
     "keywords": ["Mandrill", "transaction mail", "transactional", "messages", "email"],
-    "homepage": "https://github.com/Hipaway-Travel/HipMandrillBundle",
+    "homepage": "https://github.com/ffreitas-br/MandrillBundle",
     "license": "MIT",
     "authors": [
         {
@@ -14,16 +14,23 @@
         {
             "name": "Github Community",
             "homepage": "https://github.com/Hipaway-Travel/HipMandrillBundle/contributors"
+        },
+        {
+            "name": "Felipe Freitas",
+            "homepage": "https://github.com/felipemyung"
         }
     ],
     "require": {
-        "symfony/http-foundation": ">=2.1",
-        "symfony/config": ">=2.1",
+        "symfony/symfony": "2.5.*@stable",
         "mandrill/mandrill": "1.*"
     },
-    "autoload": {
-        "psr-0": { "Hip\\MandrillBundle": "" }
+    "require-dev": {
+        "phpunit/phpunit": "4.1.*@stable"
     },
-    "target-dir": "Hip/MandrillBundle",
-    "minimum-stability": "alpha"
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-0": {
+            "FFreitasBr\\MandrillBundle": "src/"
+        }
+    }
 }

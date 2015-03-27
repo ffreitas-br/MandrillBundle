@@ -31,7 +31,7 @@ Add the bundle to your composer.json
 # composer.json
 {
  "require": {
-     "hipaway-travel/mandrill-bundle": "dev-master",
+     "ffreitas-br/mandrill-bundle": "1.*",
  }
 }
 ```
@@ -51,7 +51,7 @@ Enable the bundle in the kernel
     {
         $bundles = array(
             // ...
-            new Hip\MandrillBundle\HipMandrillBundle(),
+            new FFreitasBr\MandrillBundle\MandrillBundle(),
         );
     }
 
@@ -65,7 +65,7 @@ Log in to Mandrill and go to "Settings" -> "SMTP and API Credentials". Create an
 ```yaml
 # config.yml
 
-hip_mandrill:
+mandrill:
     api_key: xxxxx
     disable_delivery: true # useful for dev/test environment. Default value is 'false'
     default:
@@ -91,19 +91,19 @@ Simple controller Example:
 
 <?php
 
-// src/Hip/ExampleBundle/Controller/ExampleController.php
-namespace Hip\ExampleBundle\Controller;
+// src/FFreitasBr/ExampleBundle/Controller/ExampleController.php
+namespace FFreitasBr\ExampleBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use Hip\MandrillBundle\Message;
-use Hip\MandrillBundle\Dispatcher;
+use FFreitasBr\MandrillBundle\Message;
+use FFreitasBr\MandrillBundle\Dispatcher;
 
 class ExampleController extends Controller
 {
     public function indexAction()
     {
-        $dispatcher = $this->get('hip_mandrill.dispatcher');
+        $dispatcher = $this->get('mandrill.dispatcher');
 
         $message = new Message();
 
